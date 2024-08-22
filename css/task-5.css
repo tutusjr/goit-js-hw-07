@@ -1,0 +1,18 @@
+.change-color{
+    background-color: #4e75ff;
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    text-align: center;
+    width: max-content;
+}
+
+.widget{
+    display: inline-flex;
+    gap: 8px;
+    flex-direction: column;
+}
