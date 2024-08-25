@@ -25,13 +25,13 @@ const images = [
       alt: "Lighthouse Coast Sea",
     }
   ];
+
+
+  let insertImages = ''
   
   for(let i = 0, len = images.length ; i < len ; i++){
-    const li = document.createElement("li");
-    li.innerHTML = `<img src = "${images[i].url}" alt = "${images[i].alt}">`;
-    gallery.appendChild(li)
+    insertImages += `<li><img src="${images[i].url}" alt="${images[i].alt}"></li>`;
   }
 
-  
-
+gallery.insertAdjacentHTML('beforeend', insertImages);
  

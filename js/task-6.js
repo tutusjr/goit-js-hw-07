@@ -9,22 +9,19 @@ function getRandomHexColor() {
       .padStart(6, 0)}`;
   }
 
-  function createBoxes(amount){
-    const maxAmount = 100;
-    if (amount > maxAmount) {
-        alert(`Maksimum ${maxAmount} kutu olusturabilirsiniz.`);
-        amount = maxAmount;
-    }else{
-        for (let i = 0; i < amount; i++){
-            const div = document.createElement('div');
-            div.style.backgroundColor = getRandomHexColor();
-            div.style.width = `${30 + 10 * i}px`;
-            div.style.height = `${30 + 10 * i}px`;
-            boxes.append(div);
-        }
-    }
-    
-  }
+  
+
+  function createBoxes(amount) {
+    const divs = Array.from({ length: amount }, (_, i) => {
+        const div = document.createElement('div');
+        div.style.backgroundColor = getRandomHexColor();
+        div.style.width = `${30 + 10 * i}px`;
+        div.style.height = `${30 + 10 * i}px`;
+        return div;
+    });
+
+    boxes.append(...divs);
+}
 
   function destroyBoxes(){
     boxes.innerHTML = '';
